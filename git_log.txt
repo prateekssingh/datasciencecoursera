@@ -1,0 +1,77 @@
+pss-MacBook-Pro:datasciencecoursera Prateek$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	HelloWorld.html
+	HelloWorld.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+pss-MacBook-Pro:datasciencecoursera Prateek$ git add HelloWorld.md
+pss-MacBook-Pro:datasciencecoursera Prateek$ more HelloWorld.md
+## This is a markdown file
+pss-MacBook-Pro:datasciencecoursera Prateek$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   HelloWorld.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	HelloWorld.html
+
+pss-MacBook-Pro:datasciencecoursera Prateek$ git commit -m "Add markdown file."
+[master baeda2c] Add markdown file.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 HelloWorld.md
+pss-MacBook-Pro:datasciencecoursera Prateek$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	HelloWorld.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+pss-MacBook-Pro:datasciencecoursera Prateek$ git add HelloWorld.html 
+pss-MacBook-Pro:datasciencecoursera Prateek$ git commit -m "Added html output file."
+[master 42a470a] Added html output file.
+ 1 file changed, 91 insertions(+)
+ create mode 100644 HelloWorld.html
+pss-MacBook-Pro:datasciencecoursera Prateek$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+pss-MacBook-Pro:datasciencecoursera Prateek$ git diff
+pss-MacBook-Pro:datasciencecoursera Prateek$ git log
+commit 42a470ad10d12d2fb4c48d84ed764fdb8afb3932
+Author: Prateek Singh <Prateek.s.singh@gmail.com>
+Date:   Thu May 21 19:59:29 2015 -0700
+
+    Added html output file.
+
+commit baeda2c92836b2d4c6bee395512e389dea2f381f
+Author: Prateek Singh <Prateek.s.singh@gmail.com>
+Date:   Thu May 21 19:59:02 2015 -0700
+
+    Add markdown file.
+
+commit 9a894eb0f0786e61a431d56f54858aeb4d43e973
+Author: Prateek Singh <prateekssingh@users.noreply.github.com>
+Date:   Thu May 21 18:43:51 2015 -0700
+
+    Initial commit
+pss-MacBook-Pro:datasciencecoursera Prateek$ git push origin master
+Counting objects: 6, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 176.91 KiB | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/prateekssingh/datasciencecoursera.git
+   9a894eb..42a470a  master -> master
